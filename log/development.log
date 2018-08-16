@@ -20,7 +20,7 @@ Completed 200 OK in 29ms (Views: 24.4ms | ActiveRecord: 0.0ms)
 Migrating to CreateBlogs (20180815234914)
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   ↳ /usr/local/var/rbenv/versions/2.3.7/bin/rake:22
-  [1m[35m (126.7ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" character varying, "img" character varying, "starRating" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (126.7ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" character varying, "img" character varying, "starRating" character varying, "genre" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
   ↳ db/migrate/20180815234914_create_blogs.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (43.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180815234914"]]
   ↳ /usr/local/var/rbenv/versions/2.3.7/bin/rake:22
@@ -140,7 +140,7 @@ Migrating to CreateBlogs (20180815234914)
 Migrating to CreateBlogs (20180816001711)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   ↳ bin/rails:4
-  [1m[35m (46.7ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" character varying, "img" character varying, "starRating" integer, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (46.7ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" character varying, "img" character varying, "starRating" integer, "genre" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
   ↳ db/migrate/20180816001711_create_blogs.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180816001711"]]
   ↳ bin/rails:4
@@ -187,8 +187,8 @@ Migrating to CreateBlogs (20180816001711)
 Migrating to ChangeTypeName (20180816003547)
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   ↳ bin/rails:4
-  [1m[35m (64.8ms)[0m  [1m[35mALTER TABLE "blogs" RENAME COLUMN "types" TO "genre"[0m
-  ↳ db/migrate/20180816003547_change_type_name.rb:3
+  [1m[35m (64.8ms)[0m  [1m[35mALTER TABLE "blogs" RENAME COLUMN "genres" TO "genre"[0m
+  ↳ db/migrate/20180816003547_change_genre_name.rb:3
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
   ↳ bin/rails:4
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6147091081717809720)[0m
@@ -200,8 +200,8 @@ Migrating to ChangeTypeName (20180816003547)
 Migrating to ChangeTypeName (20180816003547)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   ↳ bin/rails:4
-  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "blogs" RENAME COLUMN "type" TO "genre"[0m
-  ↳ db/migrate/20180816003547_change_type_name.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "blogs" RENAME COLUMN "genre" TO "genre"[0m
+  ↳ db/migrate/20180816003547_change_genre_name.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180816003547"]]
   ↳ bin/rails:4
   [1m[35m (41.6ms)[0m  [1m[35mCOMMIT[0m
